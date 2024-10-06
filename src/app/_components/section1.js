@@ -6,9 +6,9 @@ export default function Section1({textStory, lien}) {
   return (
     <div>
       <div className="container mx-auto py-10">
-        <div className="flex flex-col md:flex-row items-center gap-5">
+        <div className="flex flex-col md:flex-row items-center gap-10">
           <div className="w-full md:w-[60%] px-4">
-            <h1 className="lg:text-xl text-black bg-white">
+            <h1 className="lg:text-xl rounded-lg text-black bg-white">
               {textStory}
             </h1>
           </div>
