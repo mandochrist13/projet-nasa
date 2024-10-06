@@ -18,7 +18,7 @@ export default function goodFutur() {
       <div className="container mx-auto py-4">
         <div className="w-full items-center justify-center flex flex-col gap-8">
           <div className="w-full md:w-[50%] items-center flex justify-center px-4">
-            <h1 className="text-[26px] bg-white md:text-[36px] text-[#083849]">
+            <h1 id="section3" className="text-[26px] bg-white md:text-[36px] text-[#083849]">
             Que Nous Réserve l&apos;Avenir ?
             </h1>
           </div>

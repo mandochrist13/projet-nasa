@@ -19,7 +19,7 @@ export default function badFutur() {
       <div className="container mx-auto py-4">
         <div className="w-full items-center justify-center flex flex-col gap-8">
           <div className="w-full md:w-[50%] items-center flex justify-center px-4">
-            <h1 className="text-[26px] text-center bg-white md:text-[36px] text-[#083849]">
+            <h1 id="section4" className="text-[26px] text-center bg-white md:text-[36px] text-[#083849]">
             Une Prévision Qui Pourrait Tout Changer
             </h1>
           </div>

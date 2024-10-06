@@ -20,15 +20,15 @@ export default function PageNow({ params }) {
             ></iframe>
 
             <div className="w-full gap-5 flex flex-col py-8 items-center">
-              <h1 class="text-2xl text-center text-black font-bold">
+              <h1 className="text-2xl text-center text-black font-bold">
                 {good.titre}
               </h1>
-              <p class="text-black px-10">{good.description} </p>
+              <p className="text-black px-10">{good.description} </p>
             </div>
           </div>
 
-          <div class="p-8 md:w-1/3 md:h-screen md:overflow-y-auto mx-auto">
-            <p class="text-black">{good.explication}</p>
+          <div className="p-8 md:w-1/3 md:h-screen md:overflow-y-auto mx-auto">
+            <p className="text-black">{good.explication}</p>
           </div>
         </div>
       </div>

@@ -14,11 +14,11 @@ export default function MidSection() {
 
 
   return (
-    <div>
+    <div >
       <div className="container mx-auto py-4">
         <div className="w-full items-center justify-center flex flex-col gap-8">
           <div className="w-full md:w-[50%] items-center flex justify-center px-4">
-            <h1 className="text-[20px] bg-white text-center md:text-[36px] text-[#083849]">
+            <h1 id="section1" className="text-[20px] bg-white text-center md:text-[36px] text-[#083849]">
             La Vie Idéale au Commencement : Le Calme Avant la Tempête ?
             </h1>
           </div>

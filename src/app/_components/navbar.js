@@ -5,12 +5,12 @@ import Image from "next/image";
 export default function Navbar() {
   return (
     <nav className="bg-white">
-      <div className="w-full flex items-center justify-between mx-auto p-4">
+      <div className="w-full flex items-center justify-around mx-auto">
         <a href="/" className="flex items-center">
           <Image
             src="/assets/logo.png"
             alt="logo ekang"
-            className="object-cover h-[50px] w-[160px]"
+            className="object-cover h-[100px] w-[160px]"
             width={1080}
             height={600}
           />
@@ -47,18 +47,23 @@ export default function Navbar() {
               </a>
             </li>
             <li>
-              <a href="" className="text-[#083849] ">
+              <a href="#section1" className="text-[#083849] ">
                 Passé
               </a>
             </li>
             <li>
-              <a href="/" className="text-[#083849]">
+              <a href="#section2" className="text-[#083849]">
                 Présent
               </a>
             </li>
             <li>
-              <a href="" className="text-[#083849] ">
+              <a href="#section3" className="text-[#083849] ">
                 Futur
+              </a>
+            </li>
+            <li>
+              <a href="#section4" className="text-[#083849] ">
+                Solution
               </a>
             </li>
           </ul>

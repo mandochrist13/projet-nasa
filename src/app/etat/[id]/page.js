@@ -7,9 +7,9 @@ export default function PageMidsection({ params }) {
   );
   return (
     <div className="bg-white pt-10 min-h-screen">
-      <div class="">
-        <div class="flex flex-col md:flex-row justify-around w-full">
-          <div class="px-10 w-full flex flex-col-reverse md:flex-col mx-auto">
+      <div className="">
+        <div className="flex flex-col md:flex-row justify-around w-full">
+          <div className="px-10 w-full flex flex-col-reverse md:flex-col mx-auto">
             <iframe
               className="w-full h-[400px] rounded-3xl"
               src={midsection.href}

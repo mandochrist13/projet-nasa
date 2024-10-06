@@ -18,7 +18,7 @@ export default function present() {
       <div className="container mx-auto py-4">
         <div className="w-full items-center justify-center flex flex-col gap-8">
           <div className="w-full md:w-[50%] items-center flex justify-center px-4">
-            <h1 className="text-[26px] bg-white text-center md:text-[36px] text-[#083849]">
+            <h1 id="section2" className="text-[26px] bg-white text-center md:text-[36px] text-[#083849]">
             Les Ombres des Gaz à Effet de Serre : Quel Impact sur notre Climat
             </h1>
           </div>
