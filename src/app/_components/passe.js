@@ -1,11 +1,11 @@
 import "../globals.css";
 import Image from "next/image";
 import Link from "next/link";
-import Spline from "@splinetool/react-spline/next";
+// import Spline from "@splinetool/react-spline/next";
 import { midsections } from "../data/mid";
 
 export default function MidSection() {
-  const lim = 90;
+
 
   return (
     <div>

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function HeroSection() {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible] = useState(true);
   return (
     <header
       className="bg-cover bg-center h-svh"

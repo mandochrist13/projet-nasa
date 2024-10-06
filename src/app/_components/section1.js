@@ -1,5 +1,5 @@
 import "../globals.css";
-import Image from "next/image";
+// import Image from "next/image";
 import Spline from "@splinetool/react-spline/next";
 
 export default function Section1() {

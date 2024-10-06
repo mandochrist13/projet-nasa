@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import { midsections } from "../../data/mid";
 
 export default function PageActualites({ params }) {

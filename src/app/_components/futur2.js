@@ -1,11 +1,11 @@
 import "../globals.css";
 import Image from "next/image";
 import Link from "next/link";
-import Spline from "@splinetool/react-spline/next";
+// import Spline from "@splinetool/react-spline/next";
 import { futurBad } from "../data/fut2";
 
 export default function badFutur() {
-  const lim = 90;
+  
 
   return (
     <div>

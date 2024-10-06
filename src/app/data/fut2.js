@@ -19,7 +19,7 @@ const futurBad = [
         id:3,
         titre: "Fang",
         photo: "/assets/DEMO_FU2.jpg",
-        description: "voilà",
+        description: "Les arbres apportent également d'autres bénéfices, comme la diminution des effets des îlots de chaleur urbains.",
         href: "",
         explication:""
     }]
