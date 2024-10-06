@@ -19,7 +19,7 @@ export default function present() {
         <div className="w-full items-center justify-center flex flex-col gap-8">
           <div className="w-full md:w-[50%] items-center flex justify-center px-4">
             <h1 id="section2" className="text-[26px] bg-white text-center md:text-[36px] text-[#083849]">
-            Les Ombres des Gaz à Effet de Serre : Quel Impact sur notre Climat
+            L&apos;ombre des Gaz à Effet de Serre : Quel Impact sur notre Climat?
             </h1>
           </div>
           <div className="w-full md:w-[80%] gap-5 grid grid-cols-1 md:grid-cols-3 px-4">

@@ -28,7 +28,7 @@ export default function PageNow({ params }) {
           </div>
 
           <div className="p-8 md:w-1/3 md:h-screen md:overflow-y-auto mx-auto">
-            <p className="text-black">{good.explication}</p>
+            <p className="text-black text-justify">{good.explication}</p>
           </div>
         </div>
       </div>
