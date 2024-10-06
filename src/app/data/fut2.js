@@ -1,7 +1,7 @@
 const futurBad = [
     {
         id:10,
-        titre: "Fang",
+        titre: "Rôle Essentiel des Forêts",
         photo: "/assets/terre_fu2.jpg",
         description: "Les forêts, en jouant un rôle essentiel dans le cycle du carbone, contribuent à atténuer les effets du changement climatique à l'échelle mondiale.", 
         href: "https://skybox.blockadelabs.com/e/cd57453af6c832f864d1868b7fbcbf24",
@@ -9,15 +9,15 @@ const futurBad = [
     },
     {
         id:11,
-        titre: "Fang",
+        titre: "Les Océans au Service du Climat",
         photo: "/assets/ocean_fu2.jpg",
-        description: "voilà",
+        description: "En contrôlant le réchauffement climatique, nous ralentissons l'élévation du niveau de la mer, ce qui aide à protéger les écosystèmes côtiers.",
         href: "",
         explication:""
     },
     {
         id:12,
-        titre: "Fang",
+        titre: "Raffraîchissement Urbain",
         photo: "/assets/DEMO_FU2.jpg",
         description: "Les arbres apportent également d'autres bénéfices, comme la diminution des effets des îlots de chaleur urbains.",
         href: "",

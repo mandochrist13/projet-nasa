@@ -1,7 +1,7 @@
 const presents = [
     {
         id:4,
-        titre: "Fang",
+        titre: "Feux de Forêt et Urbanisation : Un Lien Alarmant",
         photo: "/assets/TERRE_pr.jpg",
         description: "D'après la NASA, l'activité humaine, notamment la conversion des terres naturelles en zones urbaines, contribue à des catastrophes comme les feux de forêt.", 
         href: "https://skybox.blockadelabs.com/e/90548dc38e365789ea284fb5601b954c",
@@ -9,19 +9,19 @@ const presents = [
     },
     {
         id:5,
-        titre: "Fang",
+        titre: "Les Dangers de la Fonte des Glaciers",
         photo: "/assets/OCEAN_pr.jpg",
         description: "Le réchauffement climatique cause la fonte des glaciers et l'expansion thermique de l'eau, entraînant une élévation du niveau de la mer et un risque accru d'inondations dans les zones côtières.",
         href: "",
-        explication:""
+        explication:"Une vidéo de l'Agence Spatiale européenne (ESA) examine l'impact du changement climatique sur la montée des mers et océans. Trois causes principales en sont à l'origine : la dilatation thermique des océans, la fonte des calottes polaires et des glaciers, ainsi que les variations des stocks d'eau continentale.Les données satellites révèlent que la fonte des glaciers contribue à environ 6,6 mm de hausse par décennie, soit 20 % de l'augmentation totale observée entre 2003 et 2013. La calotte glaciaire du Groenland ajoute 8,3 mm (25 %), tandis que celle de l'Antarctique contribue 3,6 mm (11 %). La dilatation thermique représente 9,9 mm (30 %), et les changements dans les stocks d'eau continentale, 3,3 mm (10 %).L'eau se dilate lorsqu'elle se réchauffe, et cette dilatation, combinée à la chaleur accumulée en raison des émissions de gaz à effet de serre, provoque la montée du niveau des mers. Les scientifiques utilisent des altimètres satellites pour mesurer précisément cette montée, ce qui leur permet de mieux comprendre les variations du niveau océanique.Cette élévation des eaux a des répercussions significatives sur nos modes de vie, entraînant des inondations qui constituent un risque majeur à l'échelle mondiale, avec des pertes humaines et des dommages matériels considérables."
     },
     {
         id:6,
-        titre: "Fang",
+        titre: "Gaz à Effet de Serre",
         photo: "/assets/industrie.jpg",
         description: "Depuis la révolution industrielle, les activités humaines ont libéré de grandes quantités de dioxyde de carbone et d'autres gaz à effet de serre, contribuant ainsi à la modification du climat terrestre.",
         href: "",
-        explication:""
+        explication:"Depuis la révolution industrielle, les activités humaine on libérer de grandes quantité de dioxyde de carbone et  d’autres gaz à effet de serre ce qui a participé à la modification du climat de la terre . En effet nous devons note également que les processus naturels tels que les changements dans l’énergie solaire et les éruptions volcaniques affecte également le climat. Cause Les activités humaines libèrent actuellement 30milliard de tonnes de dioxyde de carbone dans l’atmosphère chaque années selon EPA. Les concentration atmosphériques de dioxyde de carbone ont augmenté de plus de 40% depuis l’ère  préindustrielle passant d’environ 280 parties par million au 18e siècle à 414 parties par million. En 2019 les concentration de protoxyde d’azote ont augmenté par rapport au niveau préindustrielle de 270 ppb 332ppb . Impact : Le changement climatique a un impact considérable sur la santé humaine , sur l’écosystème . Depuis 1983, les états unies  ont enregistré en moyenne 70000 incendie de forêt par an . Selon les donnes du nation interagency fire center sur les 1 années ou la plus grande superficie a brûlé toute se sont produites depuis 2024 y compris les années de pointe tel que 2015 et 2020 , ces années coïncide au année les plus chaude jamais enregistré au monde . De 1965 a 2015 , l’ampleur des inondations dans les rivières et les ruisseaux au évoluer aux état unies . Selon slater et villarini , 2016."
     }]
 
     export {presents};

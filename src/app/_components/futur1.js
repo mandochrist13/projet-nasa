@@ -3,6 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 // import Spline from "@splinetool/react-spline/next";
 import { futurGood } from "../data/fut1";
+function truncateText(text, maxLength) {
+    if (text.length <= maxLength) {
+      return text;
+    }
+    return text.slice(0, maxLength) + '...';
+  }
 
 export default function goodFutur() {
   
@@ -11,9 +17,9 @@ export default function goodFutur() {
     <div>
       <div className="container mx-auto py-4">
         <div className="w-full items-center justify-center flex flex-col gap-8">
-          <div className="w-full items-center flex justify-center px-4">
-            <h1 className="text-[26px] md:text-[36px] text-[#083849]">
-              Vous devriez aussi aimer
+          <div className="w-full md:w-[50%] items-center flex justify-center px-4">
+            <h1 className="text-[26px] bg-white md:text-[36px] text-[#083849]">
+            Que Nous Réserve l&apos;Avenir ?
             </h1>
           </div>
           <div className="w-full md:w-[80%] gap-5 grid grid-cols-1 md:grid-cols-3 px-4">
@@ -35,14 +41,14 @@ export default function goodFutur() {
                       {histoire.titre}
                     </h3>
                     <p className="text-black font-regular text-[15.5px] leading-[24px] pb-[10px]">
-                      {histoire.description}
+                    {truncateText(histoire.description, 100)}
                     </p>
                   </div>
                   <div className="flex justify-end items-end mt-[20px] mx-3">
                     <button className="hover:animate-none text-[#377A00] text-[15px] bg-cyan-800 hover:bg-[#65973c] hover:text-white font-medium rounded-lg px-5 py-2.5 w-auto">
                       <Link href={`/badcase/${histoire.id}`} class="pb-6 text-white ">
                         {" "}
-                        Rejoignez-nous
+                        Lire la suite
                       </Link>
                     </button>
                   </div>

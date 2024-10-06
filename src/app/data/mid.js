@@ -1,7 +1,7 @@
 const midsections = [
     {
         id:1,
-        titre: "Fang",
+        titre: "Climat et Nature Avant l'Ère Industrielle",
         photo: "/assets/DEMO_PA.jpg",
         description: "Avant la Révolution industrielle, qui a débuté vers la fin du XVIIIe siècle, le climat et l’environnement terrestre étaient marqués par un équilibre naturel", 
         href: "https://skybox.blockadelabs.com/e/cd57453af6c832f864d1868b7fbcbf24",
@@ -9,7 +9,7 @@ const midsections = [
     },
     {
         id:2,
-        titre: "Fang",
+        titre: "Les Océans comme Stabilisateurs Climatiques",
         photo: "/assets/océan_pa.jpg",
         description: "Les océans étaient en équilibre, jouant un rôle de régulateurs naturels du climat en absorbant le CO₂ de l'atmosphère et en stabilisant les températures.",
         href: "",
@@ -17,7 +17,7 @@ const midsections = [
     },
     {
         id:3,
-        titre: "Fang",
+        titre: "La Nature au Service de la Qualité de l'Air",
         photo: "/assets/terre_pa.jpg",
         description: "L'air était plus pur, avec des niveaux de pollution bien inférieurs à ceux de l'ère industrielle, et les écosystèmes régulaient naturellement les émissions de gaz à effet de serre.",
         href: "",

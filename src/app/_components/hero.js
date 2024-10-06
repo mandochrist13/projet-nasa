@@ -28,11 +28,10 @@ export default function HeroSection() {
                 initial={{ opacity: 0, scale: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6 }}
-                className="flex flex-col gap-4 w-full max-w-[500px]"
+                className="flex flex-col gap-4 w-1/3 md:w-full max-w-[500px]"
               >
                 <h1 className="text-[23px] md:text-4xl text-center font-bold text-white">
-                  Comment lutter contre le réchauffement climatique en 5 actions
-                  clefs
+                Un Avertissement pour notre Planète : L&apos;Histoire de Nos Choix
                 </h1>
               </motion.div>
             )}
