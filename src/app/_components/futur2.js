@@ -40,7 +40,7 @@ export default function badFutur() {
                   </div>
                   <div className="flex justify-end items-end mt-[20px] mx-3">
                     <button className="hover:animate-none text-[#377A00] text-[15px] bg-cyan-800 hover:bg-[#65973c] hover:text-white font-medium rounded-lg px-5 py-2.5 w-auto">
-                      <Link href={`/etat/${histoire.id}`} class="pb-6 text-white ">
+                      <Link href={`/goodcase/${histoire.id}`} class="pb-6 text-white ">
                         {" "}
                         Rejoignez-nous
                       </Link>
