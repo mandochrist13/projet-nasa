@@ -1,22 +1,18 @@
-import "../globals.css";
-// import Image from "next/image";
-import Spline from "@splinetool/react-spline/next";
+import LazySpline from "./lazy-spline";
 
-export default function Section1({textStory, lien}) {
+export default function Section1({ textStory, lien }) {
   return (
-    <div>
-      <div className="container mx-auto py-10">
-        <div className="flex flex-col md:flex-row items-center gap-10">
-          <div className="w-full md:w-[60%] px-4">
-            <h1 className="lg:text-xl rounded-lg text-black bg-white">
-              {textStory}
-            </h1>
-          </div>
-          <div className="w-full md:w-[40%]  px-4">
-            <Spline className="rounded-3xl" scene={lien} />
-          </div>
+    <section className="container mx-auto py-10">
+      <div className="flex flex-col items-center gap-10 md:flex-row">
+        <div className="w-full px-4 md:w-3/5">
+          <p className="rounded-lg bg-white text-black lg:text-xl">
+            {textStory}
+          </p>
+        </div>
+        <div className="w-full px-4 md:w-2/5">
+          <LazySpline scene={lien} />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -1,44 +1,32 @@
+import { notFound } from "next/navigation";
 
+import StoryDetail from "../../_components/story-detail";
 import { midsections } from "../../data/mid";
 
-export default function PageMidsection({ params }) {
-  const midsection = midsections.find(
-    (midsection) => midsection.id === parseInt(params.id)
-  );
-  return (
-    <div className="bg-white pt-10 min-h-screen">
-      <div className="">
-        <div className="flex flex-col md:flex-row justify-around w-full">
-          <div className="px-10 w-full flex flex-col-reverse md:flex-col mx-auto">
-            <iframe
-              className="w-full h-[400px] rounded-3xl"
-              src={midsection.href}
-              width={700}
-              height={700}
-              style={{ border: 0 }}
-              allow="fullscreen"
-            ></iframe>
+function findStory(id) {
+  // Comparaison en chaine : parseInt("abc") donnait NaN et la page plantait.
+  return midsections.find((story) => String(story.id) === id);
+}
 
-            <div className="w-full gap-5 flex flex-col py-8 items-center">
-              <h1 class="text-2xl text-center text-black font-bold">
-                {midsection.titre}
-              </h1>
-              <p class="text-black px-10">{midsection.description} </p>
-            </div>
-          </div>
+// Les contenus sont statiques : on prerend les trois pages au build.
+export function generateStaticParams() {
+  return midsections.map((story) => ({ id: String(story.id) }));
+}
 
-          <div class="p-8 md:w-1/3 md:h-screen md:overflow-y-auto mx-auto">
-            <p class="text-black text-justify">{midsection.explication}</p>
-          </div>
-        </div>
-      </div>
-      {/* <Image
-              src={midsections.image}
-              alt="image"
-              width={300}
-              height={100}
-              className="object-cover w-[50%] mx-auto"
-            ></Image> */}
-    </div>
-  );
+export async function generateMetadata({ params }) {
+  const { id } = await params;
+  const story = findStory(id);
+
+  if (!story) return { title: "Contenu introuvable" };
+  return { title: story.titre, description: story.description };
+}
+
+export default async function PageMidsection({ params }) {
+  // Next 16 : params est une promesse, il faut l'attendre avant de lire l'id.
+  const { id } = await params;
+  const story = findStory(id);
+
+  if (!story) notFound();
+
+  return <StoryDetail story={story} />;
 }

@@ -1,30 +1,59 @@
-import "../globals.css";
-// import Link from "next/link";
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+
+// Les ancres sont prefixees par "/" : depuis une page de detail, un simple
+// "#section1" ne menait nulle part puisque la section vit sur l'accueil.
+const LINKS = [
+  { href: "/", label: "Accueil" },
+  { href: "/#section1", label: "Passé" },
+  { href: "/#section2", label: "Présent" },
+  { href: "/#section3", label: "Futur" },
+  { href: "/#section4", label: "Solution" },
+];
+
+// Soulignement anime partant du centre vers les deux bords.
+const LINK_CLASS = [
+  "text-brand hover:text-accent relative block cursor-pointer py-2 transition-colors",
+  "before:absolute before:bottom-0 before:left-1/2 before:h-px before:w-0 before:bg-gray-400",
+  "before:transition-[width] before:duration-500 before:ease-in-out hover:before:w-1/2",
+  "after:absolute after:right-1/2 after:bottom-0 after:h-px after:w-0 after:bg-gray-400",
+  "after:transition-[width] after:duration-500 after:ease-in-out hover:after:w-1/2",
+].join(" ");
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav className="bg-white">
-      <div className="w-full flex items-center justify-around mx-auto">
-        <a href="/" className="flex items-center">
+    <nav className="sticky top-0 z-50 bg-white shadow-sm">
+      <div className="mx-auto flex w-full items-center justify-around">
+        <Link href="/" className="flex items-center">
           <Image
             src="/assets/logo.png"
-            alt="logo ekang"
-            className="object-cover h-[100px] w-[160px]"
-            width={1080}
-            height={600}
+            alt="Logo Ekang"
+            className="h-[100px] w-[160px] object-contain"
+            width={320}
+            height={200}
+            priority
           />
-        </a>
+        </Link>
+
+        {/* L'ancien bouton reposait sur data-collapse-toggle (Flowbite), absent
+            du projet : il n'ouvrait donc rien sur mobile. */}
         <button
-          data-collapse-toggle="navbar-default"
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          onClick={() => setIsOpen((open) => !open)}
+          className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:ring-2 focus:ring-gray-200 focus:outline-none md:hidden"
           aria-controls="navbar-default"
-          aria-expanded="false"
+          aria-expanded={isOpen}
         >
-          <span className="sr-only">Open main menu</span>
+          <span className="sr-only">
+            {isOpen ? "Fermer le menu" : "Ouvrir le menu"}
+          </span>
           <svg
-            className="w-5 h-5"
+            className="h-5 w-5"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -35,37 +64,27 @@ export default function Navbar() {
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="2"
-              d="M1 1h15M1 7h15M1 13h15"
+              d={isOpen ? "M1 1l15 12M16 1L1 13" : "M1 1h15M1 7h15M1 13h15"}
             />
           </svg>
         </button>
-        <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
-            <li>
-              <a href="/" className="text-[#083849] relative hover:text-[#377A00] cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]" aria-current="page">
-                Accueil
-              </a>
-            </li>
-            <li>
-              <a href="#section1" className="text-[#083849] relative hover:text-[#377A00] cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
-                Passé
-              </a>
-            </li>
-            <li>
-              <a href="#section2" className="text-[#083849] relative hover:text-[#377A00] cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
-                Présent
-              </a>
-            </li>
-            <li>
-              <a href="#section3" className="text-[#083849] relative hover:text-[#377A00] cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
-                Futur
-              </a>
-            </li>
-            <li>
-              <a href="#section4" className="text-[#083849] relative hover:text-[#377A00] cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
-                Solution
-              </a>
-            </li>
+
+        <div
+          id="navbar-default"
+          className={`${isOpen ? "block" : "hidden"} w-full md:block md:w-auto`}
+        >
+          <ul className="mt-4 flex flex-col rounded-lg p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:p-0 rtl:space-x-reverse">
+            {LINKS.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className={LINK_CLASS}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
